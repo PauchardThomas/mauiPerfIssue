@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView x:Class="DatatTemplatePerfIssue.Table"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DatatTemplatePerfIssue">
+    <VerticalStackLayout x:Name="Rows" Spacing="10">
+        <BindableLayout.ItemTemplate>
+            <DataTemplate x:DataType="local:Row">
+                <Grid RowDefinitions="45,1">
+                    <Grid Grid.Row="0" ColumnDefinitions="auto,auto,*" ColumnSpacing="10">
+                        <Label Grid.Column="0" Text="{Binding Title, Mode=OneTime}" />
+                        <Label Grid.Column="1" Text="{Binding Description, Mode=OneTime}" />
+                        <HorizontalStackLayout Grid.Column="2" BindableLayout.ItemsSource="{Binding Cols, Mode=OneTime}" Spacing="10" WidthRequest="500">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate x:DataType="local:Col">
+                                    <HorizontalStackLayout WidthRequest="100">
+                                        <Border HeightRequest="25" Stroke="Blue" WidthRequest="25" />
+                                        <Border HeightRequest="25" Stroke="Green" WidthRequest="25" />
+                                        <Border HeightRequest="25" Stroke="Orange" WidthRequest="25" />
+                                        <Border HeightRequest="25" Stroke="Red" WidthRequest="25" />
+                                    </HorizontalStackLayout>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </HorizontalStackLayout>
+                    </Grid>
+                    <BoxView Grid.Row="1" BackgroundColor="Black" />
+                </Grid>
+            </DataTemplate>
+        </BindableLayout.ItemTemplate>
+    </VerticalStackLayout>
+</ContentView>
