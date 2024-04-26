@@ -8,7 +8,10 @@ public partial class Table : ContentView
 	public Table()
 	{
 		InitializeComponent();
+    }
 
+    public void Load()
+    {
         ObservableCollection<Col> cols = new ObservableCollection<Col>();
         for (int i = 0; i < 8; i++)
         {
@@ -28,6 +31,5 @@ public partial class Table : ContentView
         TimeSpan timeTaken = timer.Elapsed;
         string foo = "Time taken: " + timeTaken.ToString(@"m\:ss\.fff");
         Console.Out.WriteLine(foo);
-
     }
 }

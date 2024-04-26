@@ -12,16 +12,16 @@ public partial class NewPage1 : ContentPage
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-        switcher.SelectedIndex = 0;
+        tb1.Load();
     }
 
     private void Button_Clicked_1(object sender, EventArgs e)
     {
-        switcher.SelectedIndex = 1;
+        tb2.Load();
     }
 
     private void Button_Clicked_2(object sender, EventArgs e)
     {
-        switcher.SelectedIndex = 2;
+        tb3.Load();
     }
 }

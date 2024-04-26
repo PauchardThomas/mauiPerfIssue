@@ -3,21 +3,18 @@
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DatatTemplatePerfIssue"
-             xmlns:tabs="http://sharpnado.com"
              Title="NewPage1">
     <ScrollView>
         <StackLayout>
             <HorizontalStackLayout>
-                <Button BackgroundColor="Black" Clicked="Button_Clicked" HorizontalOptions="Center" Text="Tab 1" TextColor="White" WidthRequest="200" />
-                <Button BackgroundColor="Black" Clicked="Button_Clicked_1" HorizontalOptions="Center" Text="Tab 2" TextColor="White" WidthRequest="200" />
-                <Button BackgroundColor="Black" Clicked="Button_Clicked_2" HorizontalOptions="Center" Text="Tab 3" TextColor="White" WidthRequest="200" />
+                <Button BackgroundColor="Black" Clicked="Button_Clicked" HorizontalOptions="Center" Text="Load Tab 1" TextColor="White" WidthRequest="200" />
+                <Button BackgroundColor="Black" Clicked="Button_Clicked_1" HorizontalOptions="Center" Text="Load Tab 2" TextColor="White" WidthRequest="200" />
+                <Button BackgroundColor="Black" Clicked="Button_Clicked_2" HorizontalOptions="Center" Text="Load Tab 3" TextColor="White" WidthRequest="200" />
             </HorizontalStackLayout>
             <Label x:Name="lbLoaded" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" />
-            <tabs:ViewSwitcher x:Name="switcher">
-                <tabs:DelayedView x:Name="delay" x:TypeArguments="local:Table" UseActivityIndicator="True" />
-                <tabs:DelayedView x:Name="delay2" x:TypeArguments="local:Table" UseActivityIndicator="True" />
-                <tabs:DelayedView x:Name="delay3" x:TypeArguments="local:Table" UseActivityIndicator="True" />
-            </tabs:ViewSwitcher>
+            <local:Table x:Name="tb1" />
+            <local:Table x:Name="tb2" />
+            <local:Table x:Name="tb3" />
         </StackLayout>
     </ScrollView>
 </ContentPage>
