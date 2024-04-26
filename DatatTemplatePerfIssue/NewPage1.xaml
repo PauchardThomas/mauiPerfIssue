@@ -7,7 +7,7 @@
              Title="NewPage1">
     <ScrollView>
         <StackLayout>
-            <Button BackgroundColor="Black" Clicked="Button_Clicked" HorizontalOptions="Center" Text="Load Data" TextColor="White" WidthRequest="200" />
+            <Button BackgroundColor="Black" HorizontalOptions="Center" Text="Load Data" TextColor="White" WidthRequest="200" />
             <Label x:Name="lbLoaded" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" />
             <tabs:DelayedView x:Name="delay" x:TypeArguments="local:Table" />
         </StackLayout>
